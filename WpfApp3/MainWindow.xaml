@@ -6,8 +6,37 @@
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <UniformGrid Rows="2">
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Content="Кнопка"/>
-        <CheckBox Content="123"/>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse x:Name="ellipse" Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" 
+                                              VerticalAlignment="Center" 
+                                              HorizontalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="ellipse" Property="Fill" Value="Gray"/>
+                                <Setter Property="Foreground"  Value="LightGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <UniformGrid Rows="4">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Content="Кнопка1111" Background="Red"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Content="Кнопка2222" IsEnabled="False"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Content="Кнопка3333"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Content="Кнопка4444"/>
     </UniformGrid>
 </Window>
