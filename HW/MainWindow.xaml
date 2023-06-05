@@ -7,22 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="600">
     <Window.Resources>
-        <!--<RectangleGeometry x:Key="rect"
-                           Rect="80 50 20 20" RadiusX="5" RadiusY="5"/>
-        <GeometryGroup x:Key="cross">
-            <LineGeometry StartPoint="97 67" EndPoint="83 53"/>
-            <LineGeometry StartPoint="83 67" EndPoint="97 53"/>
-        </GeometryGroup>
-
-        <EllipseGeometry  x:Key="point"
-                           Center="80 50"
-                           RadiusX="2"
-                           RadiusY="2">
-        </EllipseGeometry>
-        <Style TargetType="Path">
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="Stroke" Value="Black"/>
-        </Style>-->
         <Style TargetType="CheckBox">
             <Setter Property="Template">
                 <Setter.Value>
